@@ -9,7 +9,8 @@ package snake;
 import java.awt.Graphics2D;
 
 /**
- *
+ * 16/05/2016
+ * 
  * @author Mo
  */
 public class World extends GameObject{

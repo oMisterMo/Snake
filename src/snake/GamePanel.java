@@ -14,7 +14,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * 16/05/2016
+ * 
  * @author Mo
  */
 public class GamePanel extends JPanel implements Runnable {
@@ -215,6 +216,17 @@ public class GamePanel extends JPanel implements Runnable {
             
             square.keyReleased(e);
         }
+    }
+    
+    //Getters and Setters
+
+    //Getters and Setters
+    public Player getPlayer() {
+        return player;
+    }
+    
+    public Color getColor(){
+        return backgroundColor;
     }
 
 }

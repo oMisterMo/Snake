@@ -15,6 +15,8 @@ import java.awt.image.BufferedImage;
  * Possible subclasses: -> Tile -> Particle -> Player -> Square
  *
  * ALT + SHIFT + F = auto re-factor
+ * 
+ * 16/05/16
  *
  * @author Mo
  */
@@ -29,6 +31,7 @@ public abstract class GameObject {
 
     BufferedImage image;
 
+    //abstract void gameUpdate(float elapsed);
     abstract void gameUpdate();
 
     abstract void gameRender(Graphics2D g);

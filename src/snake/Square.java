@@ -11,7 +11,8 @@ import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 
 /**
- *
+ * 16/05/2016
+ * 
  * @author Mo
  */
 public class Square extends GameObject {

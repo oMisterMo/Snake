@@ -12,7 +12,8 @@ import java.awt.event.KeyEvent;
 import java.util.Random;
 
 /**
- *
+ * 16/05/2016
+ * 
  * @author Mo
  */
 public class Player extends GameObject {
@@ -121,25 +122,26 @@ public class Player extends GameObject {
         
         //Increment color depending on button pressed
         if (key == KeyEvent.VK_R){
-            if(red>=255){
-                red = 0;
-            }
-            //red++;
-            red = ran.nextInt(255);
+//            if(red>=255){
+//                red = 0;
+//            }
+//            red++;
+            //0<= red < 256
+            red = ran.nextInt(256);
         }
         if (key == KeyEvent.VK_G){
-            if(green>=255){
-                green = 0;
-            }
-            //green++;
-            green = ran.nextInt(255);
+//            if(green>=255){
+//                green = 0;
+//            }
+//            green++;
+            green = ran.nextInt(256);
         }
         if (key == KeyEvent.VK_B){
-            if(blue>=255){
-                blue = 0;
-            }
-            //blue++;
-            blue = ran.nextInt(255);
+//            if(blue>=255){
+//                blue = 0;
+//            }
+//            blue++;
+            blue = ran.nextInt(256);
         }
         color = new Color(red, green, blue);
     }
@@ -167,17 +169,17 @@ public class Player extends GameObject {
         //Handle Movement
         switch(currentState){
             case Player.DOWN:
-                //do this
-                y += World.TILE_HEIGHT;
+                //Movement here
+                y += World.TILE_HEIGHT *0.3;
                 break;
             case Player.LEFT:
-                x -= World.TILE_WIDTH;
+                x -= World.TILE_WIDTH*0.3;
                 break;
             case Player.RIGHT:
-                x += World.TILE_WIDTH;
+                x += World.TILE_WIDTH*0.3;
                 break;
             case Player.UP:
-                y -= World.TILE_HEIGHT;
+                y -= World.TILE_HEIGHT*0.3;
                 break;
         }
         
@@ -214,6 +216,42 @@ public class Player extends GameObject {
     }
     
     //Getters and Setters
-    
+    public int getRed() {
+        return red;
+    }
 
+    public int getGreen() {
+        return green;
+    }
+
+    public int getBlue() {
+        return blue;
+    }
+
+    public void setRed(int red) {
+        if(red < 0 || red > 255){
+            System.out.println("Can't be >255 or < 0");
+            red = 0;
+        }
+        this.red = red;
+        color = new Color(red, green, blue);
+    }
+
+    public void setGreen(int green) {
+        if(green < 0 || green > 255){
+            System.out.println("Can't be >255 or < 0");
+            green = 0;
+        }
+        this.green = green;
+        color = new Color(red, green, blue);
+    }
+
+    public void setBlue(int blue) {
+        if(blue < 0 || blue > 255 ){
+            System.out.println("Can't be >255 or < 0");
+            blue = 0;
+        }
+        this.blue = blue;
+        color = new Color(red, green, blue);
+    }
 }
