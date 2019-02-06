@@ -1,24 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * Copyright (C) 2019 Mohammed Ibrahim
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package snake;
 
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
-import java.awt.image.BufferedImage;
 
 /**
  * Represents any object which is drawn to the screen.
  *
- * Possible subclasses: -> Tile -> Particle -> Player -> Square
- *
- * ALT + SHIFT + F = auto re-factor
- * 
- * 16/05/16
- *
- * @author Mo
+ * @version 0.1.0
+ * @author Mohammed Ibrahim
  */
 public abstract class GameObject {
 
@@ -26,54 +31,69 @@ public abstract class GameObject {
     protected int y;
     protected int width;
     protected int height;
-    
     protected Rectangle hitbox;
 
-    BufferedImage image;
-
-    //abstract void gameUpdate(float elapsed);
     abstract void gameUpdate();
 
     abstract void gameRender(Graphics2D g);
-    
-    
-    //Getters and Setter
-    public void setX(int x) {
+
+    /**
+     * Sets the position and size of the game object.
+     *
+     * @param x the x position to set
+     * @param y the y position to set
+     * @param width the width to set
+     * @param height the height to set
+     */
+    public void setGameObject(int x, int y, int width, int height) {
         this.x = x;
-    }
-
-    public void setY(int y) {
         this.y = y;
-    }
-
-    public void setWidth(int width) {
         this.width = width;
-    }
-
-    public void setHeight(int height) {
         this.height = height;
     }
 
-    public int getY() {
-        return y;
-    }
-
+    /**
+     * Gets the x position of the game object
+     *
+     * @return x position
+     */
     public int getX() {
         return x;
     }
 
+    /**
+     * Gets the y position of the game object
+     *
+     * @return y position
+     */
+    public int getY() {
+        return y;
+    }
+
+    /**
+     * Gets the width of the game object
+     *
+     * @return width
+     */
     public int getWidth() {
         return width;
     }
 
+    /**
+     * Gets the height of the game object
+     *
+     * @return height
+     */
     public int getHeight() {
         return height;
     }
 
+    /**
+     * Returns the bounding rectangle of the current game object
+     *
+     * @return
+     */
     public Rectangle getHitbox() {
         return hitbox;
     }
-    
-    
-
 }
