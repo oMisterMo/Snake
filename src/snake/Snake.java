@@ -24,9 +24,7 @@ import java.util.Random;
 
 /**
  * The Snake class represents the dynamic snake that has to navigate through the
- * world finding food.
- *
- * (08-Jun-2016, 18:57:32)
+ * world finding food (08-Jun-2016, 18:57:32).
  *
  * @version 0.1.0
  * @author Mohammed Ibrahim

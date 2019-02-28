@@ -19,7 +19,8 @@ package snake;
 import java.awt.Color;
 
 /**
- * The TileType class is used to represent all enumerations of a tile.
+ * The TileType class is used to represent all enumerations of a tile
+ * (07-Jun-2016, 23:13:09).
  *
  * @version 0.1.0
  * @author Mohammed Ibrahim

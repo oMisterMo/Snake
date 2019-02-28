@@ -23,7 +23,7 @@ import java.awt.event.KeyEvent;
 import java.awt.image.*;
 
 /**
- * Game screen which ties together all classes.
+ * Game screen which ties together all classes (15 ‎May ‎2016).
  *
  * @version 0.1.0
  * @author Mohammed Ibrahim
