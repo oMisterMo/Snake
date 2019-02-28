@@ -21,7 +21,9 @@ import javax.swing.JFrame;
 import javax.swing.JSlider;
 
 /**
- * Main Class (15 ‎May ‎2016)
+ * Main Class
+ *
+ * (15 ‎May ‎2016)
  *
  * @version 0.1.0
  * @author Mohammed Ibrahim

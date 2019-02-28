@@ -1,7 +1,7 @@
 
 # Snake
 
-Eat the food that gets dropped into the world, this special snake can travel through walls and its own body.
+Eat the food that gets dropped into the world to grow in size, this special snake can travel through walls and its own body.
 
 ## Demo
 
@@ -21,9 +21,12 @@ There are no dependencies for this project so simply clone the repository to you
 ```sh
 $ git clone https://github.com/oMisterMo/Snake.git
 ```
+To run the project from the command line, go to the dist folder and type the following:
 
-Build and run to execute.
-
+```sh
+java -jar "Snake.jar"
+```
+You can also build and execute within your chosen IDE.
 
 ## Info
 
